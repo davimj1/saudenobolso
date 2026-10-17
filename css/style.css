@@ -1,0 +1,751 @@
+/* =========================================================
+   Saúde no Bolso — folha de estilos única do site
+   Paleta: Verde-esmeralda #087F68 | Verde-água #24B8A5
+           Branco-gelo #F4F8F7 | Grafite-verde #12302A (apoio)
+   Tipografia: Poppins (títulos e textos)
+   ========================================================= */
+
+/* ---------- Fontes (arquivos locais, funcionam sem internet) ---------- */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+/* ---------- Variáveis da marca ---------- */
+:root {
+  --esmeralda: #087F68;
+  --esmeralda-escuro: #06624F;
+  --agua: #24B8A5;
+  --agua-claro: #E3F5F2;
+  --gelo: #F4F8F7;
+  --branco: #FFFFFF;
+  --grafite: #12302A;
+  --cinza: #4F6B65;
+  --borda: #DCE8E5;
+  --raio: 20px;
+  --sombra: 0 6px 24px rgba(8, 127, 104, 0.10);
+  --largura: 1120px;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--grafite);
+  background-color: var(--gelo);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--esmeralda);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: var(--grafite);
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.container {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Cabeçalho e menu ---------- */
+.topo {
+  background-color: var(--branco);
+  border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.topo .logo img {
+  height: 48px;
+  width: auto;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--grafite);
+}
+
+.menu a:hover {
+  background-color: var(--agua-claro);
+  color: var(--esmeralda);
+}
+
+.menu a.ativo {
+  background-color: var(--esmeralda);
+  color: var(--branco);
+}
+
+/* ---------- Botões ---------- */
+.botao {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid var(--esmeralda);
+  background-color: var(--esmeralda);
+  color: var(--branco);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: var(--esmeralda-escuro);
+  border-color: var(--esmeralda-escuro);
+}
+
+.botao-claro {
+  background-color: transparent;
+  color: var(--esmeralda);
+}
+
+.botao-claro:hover {
+  background-color: var(--agua-claro);
+  color: var(--esmeralda);
+}
+
+.botao-branco {
+  background-color: var(--branco);
+  border-color: var(--branco);
+  color: var(--esmeralda);
+}
+
+.botao-branco:hover {
+  background-color: var(--agua-claro);
+  border-color: var(--agua-claro);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 72px 0;
+}
+
+.secao-branca {
+  background-color: var(--branco);
+}
+
+.titulo-secao {
+  max-width: 680px;
+  margin-bottom: 36px;
+}
+
+.etiqueta {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--esmeralda);
+  background-color: var(--agua-claro);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.texto-apoio {
+  color: var(--cinza);
+  font-size: 1.05rem;
+}
+
+/* ---------- Destaque inicial (hero) ---------- */
+.destaque {
+  background-color: var(--esmeralda);
+  color: var(--branco);
+  padding: 64px 0 0;
+  overflow: hidden;
+}
+
+.destaque .container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.destaque h1 {
+  color: var(--branco);
+  margin-bottom: 18px;
+}
+
+.destaque h1 span {
+  font-weight: 300;
+}
+
+.destaque .texto {
+  padding-bottom: 72px;
+}
+
+.destaque p {
+  font-size: 1.1rem;
+  color: var(--agua-claro);
+  max-width: 520px;
+}
+
+.destaque .etiqueta {
+  background-color: var(--agua);
+  color: var(--branco);
+}
+
+.destaque figure img {
+  width: 300px;
+  margin: 0 auto -60px;
+}
+
+.cabecalho-pagina {
+  background-color: var(--esmeralda);
+  color: var(--branco);
+  padding: 56px 0;
+}
+
+.cabecalho-pagina h1 {
+  color: var(--branco);
+  margin-bottom: 10px;
+}
+
+.cabecalho-pagina p {
+  color: var(--agua-claro);
+  max-width: 640px;
+  font-size: 1.1rem;
+}
+
+.cabecalho-pagina .etiqueta {
+  background-color: var(--agua);
+  color: var(--branco);
+}
+
+/* ---------- Grades e cartões ---------- */
+.grade-3,
+.grade-4,
+.grade-2 {
+  display: grid;
+  gap: 24px;
+}
+
+.grade-2 { grid-template-columns: repeat(2, 1fr); }
+.grade-3 { grid-template-columns: repeat(3, 1fr); }
+.grade-4 { grid-template-columns: repeat(4, 1fr); }
+
+.cartao {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  padding: 28px;
+  box-shadow: var(--sombra);
+}
+
+.secao-branca .cartao {
+  background-color: var(--gelo);
+  box-shadow: none;
+}
+
+.cartao p:last-child {
+  margin-bottom: 0;
+}
+
+.icone {
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: var(--agua-claro);
+  margin-bottom: 18px;
+}
+
+/* ---------- Números da pesquisa ---------- */
+.numero {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--esmeralda);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.fonte {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  margin-top: 24px;
+}
+
+/* ---------- Passo a passo ---------- */
+.passos {
+  list-style: none;
+  counter-reset: passo;
+}
+
+.passos li {
+  counter-increment: passo;
+  position: relative;
+  padding-left: 64px;
+}
+
+.passos li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--esmeralda);
+  color: var(--branco);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Módulos (página Funcionalidades) ---------- */
+.modulo {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.modulo:last-child {
+  margin-bottom: 0;
+}
+
+.modulo.invertido {
+  grid-template-columns: 1fr 260px;
+}
+
+.modulo.invertido figure {
+  order: 2;
+}
+
+.modulo figure img {
+  width: 260px;
+}
+
+.modulo figcaption {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modulo ul {
+  margin: 12px 0 0 20px;
+}
+
+.modulo li {
+  margin-bottom: 6px;
+}
+
+/* ---------- Tabela ---------- */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.tabela caption {
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--cinza);
+}
+
+.tabela th,
+.tabela td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--borda);
+  vertical-align: top;
+}
+
+.tabela thead th {
+  background-color: var(--esmeralda);
+  color: var(--branco);
+  font-weight: 500;
+}
+
+.tabela tbody th {
+  font-weight: 500;
+  color: var(--esmeralda);
+}
+
+.tabela tbody tr:last-child th,
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Missão, visão e valores ---------- */
+.lista-valores {
+  list-style: none;
+}
+
+.lista-valores li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+}
+
+.lista-valores li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--agua);
+}
+
+/* ---------- Equipe ---------- */
+.pessoa {
+  text-align: center;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background-color: var(--agua);
+  color: var(--branco);
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pessoa p {
+  color: var(--cinza);
+  font-size: 0.95rem;
+}
+
+/* ---------- Chamada final ---------- */
+.chamada {
+  background-color: var(--grafite);
+  color: var(--branco);
+  border-radius: 28px;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.chamada h2 {
+  color: var(--branco);
+  margin-bottom: 6px;
+}
+
+.chamada p {
+  color: var(--agua-claro);
+  margin-bottom: 0;
+}
+
+/* ---------- Formulário de contato ---------- */
+.contato {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--borda);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--grafite);
+  background-color: var(--gelo);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--agua);
+  background-color: var(--branco);
+}
+
+.campo textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.campo-check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  font-size: 0.95rem;
+}
+
+.campo-check input {
+  margin-top: 6px;
+  accent-color: var(--esmeralda);
+}
+
+.info-contato {
+  list-style: none;
+}
+
+.info-contato li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.info-contato img {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: var(--agua-claro);
+  flex-shrink: 0;
+}
+
+/* Perguntas frequentes (details/summary: abre e fecha sem JavaScript) */
+.faq details {
+  background-color: var(--branco);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  box-shadow: var(--sombra);
+}
+
+.faq summary {
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--esmeralda);
+}
+
+.faq details p {
+  margin: 10px 0 0;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: var(--grafite);
+  color: var(--agua-claro);
+  padding: 48px 0 24px;
+  margin-top: 0;
+}
+
+.rodape .container > div {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 32px;
+}
+
+.rodape img {
+  height: 44px;
+  width: auto;
+  margin-bottom: 14px;
+}
+
+.rodape h2 {
+  color: var(--branco);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.rodape ul {
+  list-style: none;
+}
+
+.rodape li {
+  margin-bottom: 6px;
+}
+
+.rodape a {
+  color: var(--agua-claro);
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  color: var(--branco);
+  text-decoration: underline;
+}
+
+.rodape .direitos {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 32px;
+  padding-top: 18px;
+  font-size: 0.85rem;
+  color: #9DBDB6;
+}
+
+/* ---------- Responsivo (celular e tablet) ---------- */
+@media (max-width: 900px) {
+  .grade-4 { grid-template-columns: repeat(2, 1fr); }
+  .grade-3 { grid-template-columns: 1fr; }
+  .destaque .container,
+  .contato,
+  .rodape .container > div {
+    grid-template-columns: 1fr;
+  }
+  .modulo,
+  .modulo.invertido {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .modulo.invertido figure {
+    order: 0;
+  }
+  .modulo figure img,
+  .destaque figure img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .destaque .texto {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  .grade-4,
+  .grade-2 { grid-template-columns: 1fr; }
+  .topo .container { justify-content: center; }
+  .secao { padding: 48px 0; }
+  .chamada { padding: 32px 24px; }
+  .tabela th,
+  .tabela td { padding: 12px; font-size: 0.9rem; }
+}
+
+/* Botão com contorno branco (usado sobre fundo verde) */
+.botao-contorno {
+  background-color: transparent;
+  border-color: var(--branco);
+  color: var(--branco);
+}
+
+.botao-contorno:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--branco);
+}
+
+.pessoa .avatar {
+  color: var(--branco);
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.contato aside h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale com a equipe do projeto Saúde no Bolso.">
+  <title>Contato | Saúde no Bolso</title>
+  <link rel="icon" href="img/icone-app.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo-horizontal.svg" alt="Saúde no Bolso — página inicial">
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="funcionalidades.html">Funcionalidades</a></li>
+          <li><a href="contato.html" class="ativo" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="cabecalho-pagina">
+      <div class="container">
+        <span class="etiqueta">Contato</span>
+        <h1>Fale com a gente</h1>
+        <p>Quer participar dos testes do aplicativo, dar uma sugestão ou levar o projeto para a sua UBS? Mande uma mensagem.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container contato">
+        <form class="formulario cartao" action="#" method="post">
+          <fieldset>
+            <legend>Envie sua mensagem</legend>
+            <div class="campo">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+            </div>
+            <div class="campo">
+              <label for="perfil">Você é</label>
+              <select id="perfil" name="perfil">
+                <option value="morador">Morador(a) de Maricá</option>
+                <option value="acs">Agente Comunitário de Saúde</option>
+                <option value="profissional">Profissional da UBS</option>
+                <option value="gestao">Gestão pública</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="bairro">Bairro</label>
+              <input type="text" id="bairro" name="bairro" placeholder="Ex.: Centro">
+            </div>
+            <div class="campo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui sua dúvida ou sugestão" required></textarea>
+            </div>
+            <div class="campo-check">
+              <input type="checkbox" id="testes" name="testes" value="sim">
+              <label for="testes">Quero participar dos testes do aplicativo</label>
+            </div>
+            <button type="submit" class="botao">Enviar mensagem</button>
+          </fieldset>
+        </form>
+
+        <aside>
+          <section class="cartao">
+            <h2>Onde estamos</h2>
+            <ul class="info-contato">
+              <li>
+                <img src="img/icones/mapa.svg" alt="">
+                <p>Universidade de Vassouras — Campus Maricá, Maricá (RJ)</p>
+              </li>
+              <li>
+                <img src="img/icones/email.svg" alt="">
+                <p>Formulário ao lado. Respondemos em até 3 dias úteis.</p>
+              </li>
+              <li>
+                <img src="img/icones/relogio.svg" alt="">
+                <p>Atendimento da equipe: segunda a sexta, das 18h às 22h</p>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="secao secao-branca">
+      <div class="container faq">
+        <div class="titulo-secao">
+          <span class="etiqueta">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <details>
+          <summary>O aplicativo é gratuito?</summary>
+          <p>Sim. O Saúde no Bolso é um projeto acadêmico e extensionista, sem custo para o morador.</p>
+        </details>
+        <details>
+          <summary>Como sei que o agente na minha porta é verdadeiro?</summary>
+          <p>Escaneie o QR Code do crachá ou digite a matrícula. O app mostra a foto e o vínculo dele com a Secretaria de Saúde.</p>
+        </details>
+        <details>
+          <summary>Preciso de internet o tempo todo?</summary>
+          <p>Não. As informações ficam salvas no celular e são atualizadas quando você estiver conectado ao Wi-Fi.</p>
+        </details>
+        <details>
+          <summary>O app substitui a UBS?</summary>
+          <p>Não. Ele informa e aproxima. Consultas, exames e atendimentos continuam acontecendo na sua unidade de saúde.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <div class="container">
+      <div>
+        <section>
+          <img src="img/logo-negativo.svg" alt="Saúde no Bolso">
+          <p>Aplicativo que leva a atenção primária de Maricá para a palma da mão: transparência, segurança e acesso fácil às informações da UBS.</p>
+        </section>
+        <nav aria-label="Mapa do site">
+          <h2>Navegue</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="funcionalidades.html">Funcionalidades</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h2>Projeto acadêmico</h2>
+          <ul>
+            <li>Universidade de Vassouras</li>
+            <li>Campus Maricá</li>
+            <li>Análise e Desenvolvimento de Sistemas</li>
+          </ul>
+        </section>
+      </div>
+      <p class="direitos">&copy; 2026 Saúde no Bolso — projeto extensionista acadêmico. Dados e telas são ilustrativos.</p>
+    </div>
+  </footer>
+</body>
+</html>
