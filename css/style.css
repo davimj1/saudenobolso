@@ -749,3 +749,8 @@ strong {
   font-size: 1.3rem;
   margin-bottom: 18px;
 }
+
+/* Campo armadilha contra robôs do formulário: invisível para pessoas */
+.oculto {
+  display: none;
+}

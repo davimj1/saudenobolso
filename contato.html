@@ -35,7 +35,13 @@
 
     <section class="secao">
       <div class="container contato">
-        <form class="formulario cartao" action="#" method="post">
+        <form class="formulario cartao" action="https://formsubmit.co/projetosaudenobolso@gmail.com" method="post">
+          <!-- Campos ocultos do FormSubmit: assunto do email, formato e página de retorno -->
+          <input type="hidden" name="_subject" value="Nova mensagem pelo site Saúde no Bolso">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://davimj1.github.io/saudenobolso/obrigado.html">
+          <!-- Campo armadilha contra robôs (fica escondido pelo CSS) -->
+          <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off">
           <fieldset>
             <legend>Envie sua mensagem</legend>
             <div class="campo">
@@ -82,7 +88,7 @@
               </li>
               <li>
                 <img src="img/icones/email.svg" alt="">
-                <p>Formulário ao lado. Respondemos em até 3 dias úteis.</p>
+                <p>projetosaudenobolso@gmail.com<br>Respondemos em até 3 dias úteis.</p>
               </li>
               <li>
                 <img src="img/icones/relogio.svg" alt="">
